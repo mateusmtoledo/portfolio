@@ -1,0 +1,21 @@
+---
+import Button from "./Button.astro";
+import Container from "./Container.astro";
+---
+
+<section class="bg-stone-900 h-[640px] flex flex-col">
+  <Container class="flex justify-between items-center w-full">
+    <div>
+      <h2 class="mb-4">
+        <span class="text-3xl text-gray-400"> Hi there 👋, I'm</span>
+        <br />
+        <span class="text-6xl font-bold text-indigo-600">Mateus Toledo</span>
+      </h2>
+      <p class="text-3xl font-medium mb-16">Full-Stack Web Developer</p>
+      <div class="flex gap-4">
+        <Button>Button1</Button>
+        <Button primary>Button2</Button>
+      </div>
+    </div>
+  </Container>
+</section>
