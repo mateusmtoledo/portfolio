@@ -1,0 +1,37 @@
+---
+const { text } = Astro.props;
+---
+
+<div
+  class="absolute top-0 w-full h-full opacity-0 hover:opacity-100 transition-opacity"
+>
+  <p aria-hidden="true" class="tooltip-text">
+    {text}
+  </p>
+</div>
+
+<style>
+  .tooltip-text {
+    --color: rgba(0, 0, 0, 1);
+    position: absolute;
+    top: calc(100% + 12px);
+    background-color: var(--color);
+    padding: 4px 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 4px;
+    width: max-content;
+  }
+  .tooltip-text::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid var(--color);
+  }
+</style>

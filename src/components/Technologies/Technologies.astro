@@ -1,0 +1,25 @@
+---
+import Button from "../Button.astro";
+import Container from "../Container.astro";
+import BackendTech from "./BackendTech.astro";
+import FrontendTech from "./FrontendTech.astro";
+import Languages from "./Languages.astro";
+import MiscTech from "./MiscTech.astro";
+import TestingTech from "./TestingTech.astro";
+---
+
+<section class="bg-stone-900 py-8">
+  <Container>
+    <h2 class="text-3xl font-bold text-center mb-12">Technologies</h2>
+    <ul class="flex justify-center gap-16 flex-wrap mb-20">
+      <Languages />
+      <FrontendTech />
+      <BackendTech />
+      <TestingTech />
+      <MiscTech />
+    </ul>
+    <div class="flex justify-center">
+      <Button class="m-auto">&#65291; View more</Button>
+    </div>
+  </Container>
+</section>

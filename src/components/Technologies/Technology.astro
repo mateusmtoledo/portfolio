@@ -1,0 +1,10 @@
+---
+import Tooltip from "../Tooltip.astro";
+
+const { icon, name } = Astro.props;
+---
+
+<li class="w-16 cursor-pointer relative">
+  <img class="rounded-2xl" src={icon} alt={name} />
+  <Tooltip text={name} />
+</li>
