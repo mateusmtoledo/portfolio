@@ -1,5 +1,7 @@
 ---
 import BookIcon from "../assets/img/icon/BookIcon.astro";
+import DetailsIcon from "../assets/img/icon/DetailsIcon.astro";
+import PuzzleIcon from "../assets/img/icon/PuzzleIcon.astro";
 import Container from "./Container.astro";
 import Trait from "./Trait.astro";
 ---
@@ -9,16 +11,16 @@ import Trait from "./Trait.astro";
     <h2 class="visually-hidden">Traits</h2>
     <ul class="flex flex-wrap gap-16 justify-center py-24">
       <Trait icon={BookIcon} title="SELF-TAUGHT">
-        I'm currently pursuing a degree in IT, but most of my Web development
-        knowledge was acquired while studying on my own, in my free time.
+        Most of the things you'll see here I have learned while studying through
+        open source materials, in my free time.
       </Trait>
-      <Trait icon={BookIcon} title="SELF-TAUGHT">
-        I'm currently pursuing a degree in IT, but most of my Web development
-        knowledge was acquired while studying on my own, in my free time.
+      <Trait icon={DetailsIcon} title="DETAIL-ORIENTED">
+        I put a lot of effort into deploying high quality apps, and I understand
+        that little details can make a huge difference.
       </Trait>
-      <Trait icon={BookIcon} title="SELF-TAUGHT">
-        I'm currently pursuing a degree in IT, but most of my Web development
-        knowledge was acquired while studying on my own, in my free time.
+      <Trait icon={PuzzleIcon} title="PROBLEM SOLVER">
+        I believe that getting things to work is not good enough. I strive to
+        find clean and maintainable solutions to problems.
       </Trait>
     </ul>
   </Container>
