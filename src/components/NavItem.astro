@@ -1,6 +1,9 @@
 ---
+const { class: classes } = Astro.props;
 ---
 
-<button class="text-xl font-medium hover:text-indigo-600 transition-colors">
+<button
+  class={`text-xl font-medium hover:text-indigo-600 transition-colors ${classes}`}
+>
   <slot />
 </button>

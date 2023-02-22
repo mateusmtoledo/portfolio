@@ -1,9 +1,17 @@
 ---
+import GithubIcon from "../assets/img/icon/GithubIcon.astro";
 import NavItem from "./NavItem.astro";
 ---
 
 <nav class="flex gap-8">
-  <NavItem>LINK 1</NavItem>
-  <NavItem>LINK 2</NavItem>
-  <NavItem>LINK 3</NavItem>
+  <NavItem class="hidden sm:block">
+    <a href="#projects">PROJECTS</a>
+  </NavItem>
+  <NavItem>
+    <a target="_blank" href="https://github.com/mateusmtoledo">
+      <GithubIcon
+        class="fill-white hover:fill-indigo-600 h-6 transition-colors"
+      />
+    </a>
+  </NavItem>
 </nav>
