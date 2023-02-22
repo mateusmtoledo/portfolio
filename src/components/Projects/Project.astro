@@ -1,0 +1,45 @@
+---
+import Card from "../Card.astro";
+import LiveButton from "../LiveButton.astro";
+import RepoButton from "../RepoButton.astro";
+import Tag from "../Tag.astro";
+import TagList from "../TagList.astro";
+
+const {
+  previewImg,
+  title,
+  subtitle,
+  logo,
+  features,
+  tags,
+  repoHref,
+  liveHref,
+} = Astro.props;
+---
+
+<li>
+  <Card class="flex flex-col md:flex-row">
+    <img
+      src={previewImg}
+      alt={`${title} preview`}
+      class="flex-1 object-cover min-w-0"
+    />
+    <div class="p-8 flex-1 flex flex-col justify-between">
+      <div class="flex-1 mb-16">
+        <img class="h-12" src={logo} alt={title} />
+        <p class="font-medium text-xl mb-2">{subtitle}</p>
+        <TagList class="mb-4">
+          {tags.map((tag: string) => <Tag>{tag}</Tag>)}
+        </TagList>
+        <h4 class="font-medium mb-2">Features:</h4>
+        <ul class="list-disc list-inside">
+          {features.map((feature: string) => <li class="mb-2">{feature}</li>)}
+        </ul>
+      </div>
+      <div class="flex flex-wrap gap-4 self-end">
+        <RepoButton href={repoHref} />
+        <LiveButton href={liveHref} />
+      </div>
+    </div>
+  </Card>
+</li>

@@ -1,0 +1,24 @@
+---
+import Project from "./Project.astro";
+import FANCYBOOK_PREVIEW from "../../assets/img/projects/fancybook-preview.png";
+import FANCYBOOK_LOGO from "../../assets/img/projects/fancybook-logo.png";
+
+const features = [
+  "User authentication via Email, Google, Twitter, GitHub.",
+  "Friendships, posts, comments and likes.",
+  "Customizable user profile page with CDN image uploading.",
+];
+
+const tags = ["Javascript", "React", "NodeJS", "MongoDB"];
+---
+
+<Project
+  previewImg={FANCYBOOK_PREVIEW}
+  logo={FANCYBOOK_LOGO}
+  title="Fancybook"
+  subtitle="A full-stack social network app."
+  features={features}
+  tags={tags}
+  repoHref="https://github.com/mateusmtoledo/fancybook"
+  liveHref="https://fancybook-app.netlify.app/"
+/>
