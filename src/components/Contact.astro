@@ -1,0 +1,21 @@
+---
+import MailIcon from "../assets/img/icon/MailIcon.astro";
+import WhatsAppIcon from "../assets/img/icon/WhatsAppIcon.astro";
+import ContactForm from "./ContactForm.astro";
+import Container from "./Container.astro";
+---
+
+<section id="contact" class="bg-stone-900 p-4">
+  <Container class="max-w-xl">
+    <h2 class="text-3xl font-bold text-center mb-8">Contact</h2>
+    <div class="flex items-center gap-2 mb-2">
+      <MailIcon class="fill-white w-6" />
+      <p>mateusmtoledo1@gmail.com</p>
+    </div>
+    <div class="flex items-center gap-2 mb-8">
+      <WhatsAppIcon class="fill-white w-6" />
+      <p>+55 32 98835-3739</p>
+    </div>
+    <ContactForm />
+  </Container>
+</section>
