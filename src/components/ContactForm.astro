@@ -55,8 +55,9 @@ import { t } from "i18next";
 </style>
 
 <script>
-  const form = document.getElementById("contact-form");
-  if (!form) throw new Error("Form not found");
+  import sendNotification from "../utils/sendNotification";
+
+  const form = document.getElementById("contact-form") as HTMLFormElement;
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     if (!(e.target instanceof HTMLFormElement)) return;
@@ -67,7 +68,6 @@ import { t } from "i18next";
       user_id: "Sp1b-6nyvnpp_hhP1",
       template_params: data,
     });
-    // TODO handle response
     fetch("https://api.emailjs.com/api/v1.0/email/send", {
       method: "POST",
       headers: {
@@ -75,7 +75,14 @@ import { t } from "i18next";
       },
       body,
     })
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+      .then((res) => {
+        if (res.status === 200) {
+          sendNotification("success", "I will get back to you ASAP!");
+          form.reset();
+        } else throw new Error("Something went wrong");
+      })
+      .catch(() => {
+        sendNotification("error", "Something went wrong.");
+      });
   });
 </script>
