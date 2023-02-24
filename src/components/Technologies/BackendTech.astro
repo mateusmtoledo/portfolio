@@ -4,9 +4,10 @@ import TechSection from "./TechSection.astro";
 import NODE_ICON from "../../assets/img/tech/nodejs.svg";
 import EXPRESS_ICON from "../../assets/img/tech/express.svg";
 import MONGODB_ICON from "../../assets/img/tech/mongodb.svg";
+import { t } from "i18next";
 ---
 
-<TechSection name="BACKEND">
+<TechSection name={t("technologies.backend")}>
   <Technology name="NodeJS" icon={NODE_ICON} />
   <Technology name="Express" icon={EXPRESS_ICON} />
   <Technology name="MongoDB" icon={MONGODB_ICON} />

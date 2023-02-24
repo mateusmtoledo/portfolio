@@ -2,11 +2,12 @@
 import Container from "../Container.astro";
 import FakeStore from "./FakeStore.astro";
 import Fancybook from "./Fancybook.astro";
+import { t } from "i18next";
 ---
 
 <section class="py-8 scroll-mt-24" id="projects">
   <Container class="px-4 py-8">
-    <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+    <h2 class="text-3xl font-bold text-center mb-12">{t("projects.title")}</h2>
     <ul class="space-y-16">
       <Fancybook />
       <FakeStore />

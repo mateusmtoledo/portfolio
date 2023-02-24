@@ -1,33 +1,33 @@
 ---
 import Button from "./Button.astro";
-import Card from "./Card.astro";
+import { t } from "i18next";
 ---
 
 <form id="contact-form">
-  <h3 class="font-medium text-lg mb-2">Send me a message</h3>
+  <h3 class="font-medium text-lg mb-2">{t("contact.sendMeAMessage")}</h3>
   <div class="space-y-4">
     <input
       name="from_name"
-      aria-label="Name"
+      aria-label={t("contact.name")}
       type="text"
-      placeholder="Name"
+      placeholder={t("contact.name")}
       required
     />
     <input
       name="from_email"
-      aria-label="Email"
+      aria-label={t("contact.email")}
       type="email"
-      placeholder="Email"
+      placeholder={t("contact.email")}
       required
     />
     <textarea
       name="message"
-      aria-label="Message"
-      placeholder="Message"
+      aria-label={t("contact.message")}
+      placeholder={t("contact.message")}
       rows="6"
       required></textarea>
     <div class="flex justify-end">
-      <Button primary>Send</Button>
+      <Button primary>{t("contact.send")}</Button>
     </div>
   </div>
 </form>

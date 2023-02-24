@@ -6,11 +6,14 @@ import FrontendTech from "./FrontendTech.astro";
 import Languages from "./Languages.astro";
 import MiscTech from "./MiscTech.astro";
 import TestingTech from "./TestingTech.astro";
+import { t } from "i18next";
 ---
 
 <section class="bg-stone-900 py-8">
   <Container>
-    <h2 class="text-3xl font-bold text-center mb-12">Technologies</h2>
+    <h2 class="text-3xl font-bold text-center mb-12">
+      {t("technologies.title")}
+    </h2>
     <ul class="flex justify-center gap-16 flex-wrap mb-20">
       <Languages />
       <FrontendTech />
@@ -18,8 +21,5 @@ import TestingTech from "./TestingTech.astro";
       <TestingTech />
       <MiscTech />
     </ul>
-    <div class="flex justify-center">
-      <Button primary>&#65291; View more</Button>
-    </div>
   </Container>
 </section>

@@ -3,9 +3,10 @@ import Technology from "./Technology.astro";
 import TechSection from "./TechSection.astro";
 import JS_ICON from "../../assets/img/tech/javascript.svg";
 import TS_ICON from "../../assets/img/tech/typescript.svg";
+import { t } from "i18next";
 ---
 
-<TechSection name="LANGUAGES">
+<TechSection name={t("technologies.languages")}>
   <Technology name="Javascript" icon={JS_ICON} />
   <Technology name="Typescript" icon={TS_ICON} />
 </TechSection>

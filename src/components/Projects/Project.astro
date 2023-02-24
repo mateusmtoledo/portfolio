@@ -4,6 +4,7 @@ import LiveButton from "../LiveButton.astro";
 import RepoButton from "../RepoButton.astro";
 import Tag from "../Tag.astro";
 import TagList from "../TagList.astro";
+import { t } from "i18next";
 
 const {
   previewImg,
@@ -34,7 +35,7 @@ const order = inverted ? "order-first md:order-last" : "order-first";
         <TagList class="mb-4">
           {tags.map((tag: string) => <Tag>{tag}</Tag>)}
         </TagList>
-        <h4 class="font-medium mb-2">Features:</h4>
+        <h4 class="font-medium mb-2">{t("projects.featuresTitle")}</h4>
         <ul class="list-disc list-inside">
           {features.map((feature: string) => <li class="mb-2">{feature}</li>)}
         </ul>

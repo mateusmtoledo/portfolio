@@ -4,9 +4,10 @@ import TechSection from "./TechSection.astro";
 import JEST_ICON from "../../assets/img/tech/jest.svg";
 import RTL_ICON from "../../assets/img/tech/rtl.svg";
 import CYPRESS_ICON from "../../assets/img/tech/cypress.svg";
+import { t } from "i18next";
 ---
 
-<TechSection name="TESTING">
+<TechSection name={t("technologies.testing")}>
   <Technology name="Jest" icon={JEST_ICON} />
   <Technology name="Testing Library" icon={RTL_ICON} />
   <Technology name="Cypress" icon={CYPRESS_ICON} />

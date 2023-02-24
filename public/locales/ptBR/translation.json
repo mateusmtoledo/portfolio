@@ -1,0 +1,64 @@
+{
+  "header": {
+    "projects": "PROJETOS"
+  },
+  "hero": {
+    "hiThere": "Olá 👋, eu sou",
+    "role": "Desenvolvedor Web Full-Stack",
+    "resume": "Currículo",
+    "contactMe": "Fale comigo"
+  },
+  "traits": {
+    "selfTaught": {
+      "title": "AUTODIDATA",
+      "text": "Adquiri a maioria dos conhecimentos apresentados aqui estudando através de materiais open source no meu tempo livre."
+    },
+    "detailOriented": {
+      "title": "DETALHISTA",
+      "text": "Busco sempre desenvolver aplicativos de alta qualidade e entendo que pequenos detalhes podem fazer grande diferença."
+    },
+    "problemSolver": {
+      "title": "SOLUCIONADOR",
+      "text": "Acredito que somente fazer as coisas funcionarem não é o suficiente. Me empenho para achar soluções limpas e sustentáveis para problemas."
+    }
+  },
+  "technologies": {
+    "title": "Tecnologias",
+    "languages": "LINGUAGENS",
+    "frontend": "FRONTEND",
+    "backend": "BACKEND",
+    "testing": "TESTES",
+    "misc": "OUTROS"
+  },
+  "projects": {
+    "title": "Projetos",
+    "featuresTitle": "Features:",
+    "repository": "Repositório",
+    "liveDemo": "Website",
+    "fancybook": {
+      "subtitle": "Uma rede social full-stack.",
+      "features": [
+        "Autenticação de usuários via Email, Google, Twitter, GitHub.",
+        "Amizades, posts, comentários, likes.",
+        "Página de perfil customizável com upload de imagens para CDN"
+      ]
+    },
+    "fakeStore": {
+      "subtitle": "Frontend de uma loja virtual.",
+      "features": [
+        "Páginas de produtos, landing e carrinho.",
+        "Sistema para filtrar e ordenar produtos.",
+        "Design responsivo"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contato",
+    "whatsApp": "(32) 98835-3739",
+    "sendMeAMessage": "Envie uma mensagem",
+    "name": "Nome",
+    "email": "Email",
+    "message": "Mensagem",
+    "send": "Enviar"
+  }
+}

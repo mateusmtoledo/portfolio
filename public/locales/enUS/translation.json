@@ -1,0 +1,64 @@
+{
+  "header": {
+    "projects": "PROJECTS"
+  },
+  "hero": {
+    "hiThere": "Hi there 👋, I'm",
+    "role": "Full-Stack Web Developer",
+    "resume": "Resume",
+    "contactMe": "Contact me"
+  },
+  "traits": {
+    "selfTaught": {
+      "title": "SELF-TAUGHT",
+      "text": "I have learned most of the things you'll see here while studying through open source materials in my free time."
+    },
+    "detailOriented": {
+      "title": "DETAIL-ORIENTED",
+      "text": "I put much effort into deploying high-quality applications and understand that little details can make a huge difference."
+    },
+    "problemSolver": {
+      "title": "PROBLEM SOLVER",
+      "text": "I believe just getting things to work is not good enough. I strive to find clean and maintainable solutions to problems."
+    }
+  },
+  "technologies": {
+    "title": "Technologies",
+    "languages": "LANGUAGES",
+    "frontend": "FRONTEND",
+    "backend": "BACKEND",
+    "testing": "TESTING",
+    "misc": "MISC"
+  },
+  "projects": {
+    "title": "Projects",
+    "featuresTitle": "Features:",
+    "repository": "Repository",
+    "liveDemo": "Live demo",
+    "fancybook": {
+      "subtitle": "A full-stack social network app.",
+      "features": [
+        "User authentication via Email, Google, Twitter, GitHub.",
+        "Friendships, posts, comments and likes.",
+        "Customizable user profile page with CDN image uploading."
+      ]
+    },
+    "fakeStore": {
+      "subtitle": "A web store app.",
+      "features": [
+        "Landing, products and cart pages.",
+        "Product filtering and sorting.",
+        "Responsive design."
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "whatsApp": "+55 32 98835-3739",
+    "sendMeAMessage": "Send me a message",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send"
+  }
+}

@@ -2,11 +2,12 @@
 import Project from "./Project.astro";
 import FAKE_STORE_PREVIEW from "../../assets/img/projects/fake-store-preview.png";
 import FAKE_STORE_LOGO from "../../assets/img/projects/fake-store-logo.png";
+import { t } from "i18next";
 
 const features = [
-  "Landing, products and cart pages.",
-  "Product filtering and sorting.",
-  "Responsive design.",
+  t("projects.fakeStore.features.0"),
+  t("projects.fakeStore.features.1"),
+  t("projects.fakeStore.features.2"),
 ];
 
 const tags = ["Typescript", "React", "CSS"];
@@ -16,7 +17,7 @@ const tags = ["Typescript", "React", "CSS"];
   previewImg={FAKE_STORE_PREVIEW}
   logo={FAKE_STORE_LOGO}
   title="Fake store"
-  subtitle="A web store app."
+  subtitle={t("projects.fakeStore.subtitle")}
   features={features}
   tags={tags}
   repoHref="https://github.com/mateusmtoledo/fake-store"

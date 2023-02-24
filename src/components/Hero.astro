@@ -2,27 +2,30 @@
 import DownloadIcon from "../assets/img/icon/DownloadIcon.astro";
 import Button from "./Button.astro";
 import Container from "./Container.astro";
-import RESUME_FILE from "../assets/resume/Resume-Mateus-Toledo.pdf";
+import i18next, { t } from "i18next";
+import RESUME_FILE_EN from "../assets/resume/Resume-Mateus-Toledo.pdf";
+import RESUME_FILE_BR from "../assets/resume/Curriculo-Mateus-M-Toledo.pdf";
+const RESUME_FILE = i18next.language === "br" ? RESUME_FILE_BR : RESUME_FILE_EN;
 ---
 
 <section class="bg-stone-900 h-[640px] flex flex-col">
   <Container class="flex justify-between items-center w-full">
     <div>
       <h2 class="mb-4">
-        <span class="text-3xl text-gray-400"> Hi there 👋, I'm</span>
+        <span class="text-3xl text-gray-400">{t("hero.hiThere")}</span>
         <br />
         <span class="text-6xl font-bold text-indigo-600">Mateus Toledo</span>
       </h2>
-      <p class="text-3xl font-medium mb-16">Full-Stack Web Developer</p>
+      <p class="text-3xl font-medium mb-16">{t("hero.role")}</p>
       <div class="flex flex-wrap gap-4">
         <a target="_blank" href={RESUME_FILE}>
           <Button class="flex items-center gap-1">
             <DownloadIcon class="w-6 stroke-current stroke-[10px]" />
-            <span>Resume</span>
+            <span>{t("hero.resume")}</span>
           </Button>
         </a>
         <a href="#contact">
-          <Button primary class="w-max">Contact me</Button>
+          <Button primary class="w-max">{t("hero.contactMe")}</Button>
         </a>
       </div>
     </div>

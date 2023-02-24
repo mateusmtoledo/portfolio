@@ -4,23 +4,21 @@ import DetailsIcon from "../assets/img/icon/DetailsIcon.astro";
 import PuzzleIcon from "../assets/img/icon/PuzzleIcon.astro";
 import Container from "./Container.astro";
 import Trait from "./Trait.astro";
+import { t } from "i18next";
 ---
 
 <section>
   <Container>
     <h2 class="visually-hidden">Traits</h2>
     <ul class="flex flex-wrap gap-16 justify-center py-24">
-      <Trait icon={BookIcon} title="SELF-TAUGHT">
-        I have learned most of the things you'll see here while studying through
-        open source materials in my free time.
+      <Trait icon={BookIcon} title={t("traits.selfTaught.title")}>
+        {t("traits.selfTaught.text")}
       </Trait>
-      <Trait icon={DetailsIcon} title="DETAIL-ORIENTED">
-        I put much effort into deploying high-quality applications and
-        understand that little details can make a huge difference.
+      <Trait icon={DetailsIcon} title={t("traits.detailOriented.title")}>
+        {t("traits.detailOriented.text")}
       </Trait>
-      <Trait icon={PuzzleIcon} title="PROBLEM SOLVER">
-        I believe just getting things to work is not good enough. I strive to
-        find clean and maintainable solutions to problems.
+      <Trait icon={PuzzleIcon} title={t("traits.problemSolver.title")}>
+        {t("traits.problemSolver.text")}
       </Trait>
     </ul>
   </Container>

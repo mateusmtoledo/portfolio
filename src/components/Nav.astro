@@ -1,11 +1,12 @@
 ---
 import GithubIcon from "../assets/img/icon/GithubIcon.astro";
 import NavItem from "./NavItem.astro";
+import { t } from "i18next";
 ---
 
 <nav class="flex gap-8">
   <NavItem class="hidden sm:block">
-    <a href="#projects">PROJECTS</a>
+    <a href="#projects">{t("header.projects")}</a>
   </NavItem>
   <NavItem>
     <a target="_blank" href="https://github.com/mateusmtoledo">
