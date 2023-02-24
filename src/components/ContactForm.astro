@@ -1,9 +1,10 @@
 ---
 import Button from "./Button.astro";
 import { t } from "i18next";
+import Loader from "./Loader.astro";
 ---
 
-<form id="contact-form">
+<form id="contact-form" class="relative">
   <h3 class="font-medium text-lg mb-2">{t("contact.sendMeAMessage")}</h3>
   <div class="space-y-4">
     <input
@@ -30,6 +31,7 @@ import { t } from "i18next";
       <Button primary>{t("contact.send")}</Button>
     </div>
   </div>
+  <Loader />
 </form>
 
 <!-- TODO styling could use some work -->
@@ -40,12 +42,13 @@ import { t } from "i18next";
     padding: 12px;
     border-radius: 4px;
     background-color: transparent;
-    outline: 2px solid #a8a29e;
+    border: 2px solid #a8a29e;
+    outline: none;
   }
 
   input:focus,
   textarea:focus {
-    outline: 2px solid #4f46e5;
+    border: 2px solid #4f46e5;
   }
 
   input::placeholder,
@@ -58,10 +61,19 @@ import { t } from "i18next";
   import sendNotification from "../utils/sendNotification";
 
   const form = document.getElementById("contact-form") as HTMLFormElement;
+  const loaderContainer = document.getElementById(
+    "loader-container"
+  ) as HTMLDivElement;
+  function showLoader() {
+    loaderContainer.classList.replace("hidden", "flex");
+  }
+  function hideLoader() {
+    loaderContainer.classList.replace("flex", "hidden");
+  }
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    if (!(e.target instanceof HTMLFormElement)) return;
-    const data = Object.fromEntries(new FormData(e.target).entries());
+    showLoader();
+    const data = Object.fromEntries(new FormData(form).entries());
     const body = JSON.stringify({
       service_id: "default_service",
       template_id: "portfolio_template",
@@ -79,10 +91,12 @@ import { t } from "i18next";
         if (res.status === 200) {
           sendNotification("success", "I will get back to you ASAP!");
           form.reset();
+          hideLoader();
         } else throw new Error("Something went wrong");
       })
       .catch(() => {
         sendNotification("error", "Something went wrong.");
+        hideLoader();
       });
   });
 </script>
