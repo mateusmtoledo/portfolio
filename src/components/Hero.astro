@@ -3,9 +3,10 @@ import DownloadIcon from "../assets/img/icon/DownloadIcon.astro";
 import Button from "./Button.astro";
 import Container from "./Container.astro";
 import i18next, { t } from "i18next";
-import RESUME_FILE_EN from "../assets/resume/Resume-Mateus-Toledo.pdf";
-import RESUME_FILE_BR from "../assets/resume/Curriculo-Mateus-M-Toledo.pdf";
-const RESUME_FILE = i18next.language === "br" ? RESUME_FILE_BR : RESUME_FILE_EN;
+import RESUME_FILE_EN from "../assets/resume/Mateus-Toledo-Resume.pdf";
+import RESUME_FILE_BR from "../assets/resume/Mateus-Toledo-Curriculo.pdf";
+const RESUME_FILE =
+  i18next.language === "ptBR" ? RESUME_FILE_BR : RESUME_FILE_EN;
 ---
 
 <section class="bg-stone-900 h-[640px] flex flex-col">
