@@ -1,0 +1,68 @@
+---
+import FLAG_USA from "../assets/img/locale/usa.svg";
+import FLAG_BRAZIL from "../assets/img/locale/brazil.svg";
+import i18next from "i18next";
+import Language from "./Language.astro";
+import LanguageDropdown from "./LanguageDropdown.astro";
+
+const languages = [
+  {
+    flag: FLAG_USA,
+    lang: "en-US",
+    locale: "enUS",
+    path: "",
+  },
+  {
+    flag: FLAG_BRAZIL,
+    lang: "pt-BR",
+    locale: "ptBR",
+    path: "ptBR",
+  },
+];
+
+const selectedLanguage = languages.find(
+  (language) => language.locale === i18next.language
+);
+const options = languages.filter((language) => language !== selectedLanguage);
+---
+
+<div class="relative flex w-max">
+  <button type="button" id="language-selector">
+    <Language language={selectedLanguage} />
+  </button>
+  <LanguageDropdown options={options} />
+</div>
+
+<script>
+  const languageSelector = document.getElementById("language-selector");
+  if (!languageSelector) {
+    throw new Error("Language selector element not found.");
+  }
+
+  const dropdownMenu = document.getElementById("language-dropdown");
+
+  let menuOpen = false;
+
+  function openLanguageMenu() {
+    if (!dropdownMenu) {
+      throw new Error("Dropdown menu element not found.");
+    }
+    menuOpen = true;
+    dropdownMenu.classList.remove("hidden");
+  }
+
+  function closeLanguageMenu() {
+    if (!dropdownMenu) {
+      throw new Error("Dropdown menu element not found.");
+    }
+    menuOpen = false;
+    dropdownMenu.classList.add("hidden");
+  }
+
+  function toggleLanguageMenu() {
+    if (menuOpen) closeLanguageMenu();
+    else openLanguageMenu();
+  }
+
+  languageSelector.addEventListener("click", toggleLanguageMenu);
+</script>

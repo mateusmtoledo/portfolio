@@ -1,0 +1,15 @@
+---
+import Language from "./Language.astro";
+
+const { options } = Astro.props;
+---
+
+<div id="language-dropdown" class="absolute top-full hidden w-max">
+  {
+    options.map((option: any) => (
+      <a href={`/${option.path}`}>
+        <Language language={option} />
+      </a>
+    ))
+  }
+</div>
