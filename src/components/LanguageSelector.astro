@@ -8,13 +8,13 @@ import LanguageDropdown from "./LanguageDropdown.astro";
 const languages = [
   {
     flag: FLAG_USA,
-    lang: "en-US",
+    lang: "EN-US",
     locale: "enUS",
     path: "",
   },
   {
     flag: FLAG_BRAZIL,
-    lang: "pt-BR",
+    lang: "PT-BR",
     locale: "ptBR",
     path: "ptBR",
   },
@@ -26,18 +26,30 @@ const selectedLanguage = languages.find(
 const options = languages.filter((language) => language !== selectedLanguage);
 ---
 
-<div class="relative flex w-max">
-  <button type="button" id="language-selector">
+<div class="relative flex w-20">
+  <button type="button" id="language-selector" class="transition-all w-full">
     <Language language={selectedLanguage} />
   </button>
   <LanguageDropdown options={options} />
 </div>
 
+<style>
+  #language-selector {
+    border-radius: 4px;
+    outline: 0 solid transparent;
+  }
+  #language-selector:hover:not(.active) {
+    outline: 2px solid rgb(79, 70, 229);
+  }
+  #language-selector.active {
+    background-color: rgb(79, 70, 229);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+</style>
+
 <script>
   const languageSelector = document.getElementById("language-selector");
-  if (!languageSelector) {
-    throw new Error("Language selector element not found.");
-  }
 
   const dropdownMenu = document.getElementById("language-dropdown");
 
@@ -47,21 +59,33 @@ const options = languages.filter((language) => language !== selectedLanguage);
     if (!dropdownMenu) {
       throw new Error("Dropdown menu element not found.");
     }
+    if (!languageSelector) {
+      throw new Error("Language selector element not found.");
+    }
     menuOpen = true;
-    dropdownMenu.classList.remove("hidden");
+    languageSelector.classList.add("active");
+    dropdownMenu.classList.remove("scale-y-0");
   }
 
   function closeLanguageMenu() {
     if (!dropdownMenu) {
       throw new Error("Dropdown menu element not found.");
     }
+    if (!languageSelector) {
+      throw new Error("Language selector element not found.");
+    }
     menuOpen = false;
-    dropdownMenu.classList.add("hidden");
+    languageSelector.classList.remove("active");
+    dropdownMenu.classList.add("scale-y-0");
   }
 
   function toggleLanguageMenu() {
     if (menuOpen) closeLanguageMenu();
     else openLanguageMenu();
+  }
+
+  if (!languageSelector) {
+    throw new Error("Language selector element not found.");
   }
 
   languageSelector.addEventListener("click", toggleLanguageMenu);

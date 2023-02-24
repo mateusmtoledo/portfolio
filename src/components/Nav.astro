@@ -2,9 +2,11 @@
 import GithubIcon from "../assets/img/icon/GithubIcon.astro";
 import NavItem from "./NavItem.astro";
 import { t } from "i18next";
+import LanguageSelector from "./LanguageSelector.astro";
 ---
 
 <nav class="flex gap-8">
+  <LanguageSelector />
   <NavItem class="hidden sm:block">
     <a href="#projects">{t("header.projects")}</a>
   </NavItem>
