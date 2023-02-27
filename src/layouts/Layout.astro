@@ -1,15 +1,26 @@
 ---
 import Header from "../components/Header.astro";
-
+import i18next from "i18next";
 export interface Props {
   title: string;
+}
+
+const { language } = i18next;
+let lang;
+
+switch (language) {
+  case "ptBR":
+    lang = "pt";
+    break;
+  default:
+    lang = "en";
 }
 
 const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang={lang} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
