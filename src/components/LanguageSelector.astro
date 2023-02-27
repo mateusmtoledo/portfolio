@@ -45,18 +45,21 @@ const options = languages.filter((language) => language !== selectedLanguage);
 </style>
 
 <script>
-  const languageSelector = document.getElementById("language-selector");
+  const languageSelector = document.getElementById(
+    "language-selector"
+  ) as HTMLButtonElement;
 
   const dropdownMenu = document.getElementById("language-dropdown");
+
+  document.addEventListener("click", (e) => {
+    closeLanguageMenu();
+  });
 
   let menuOpen = false;
 
   function openLanguageMenu() {
     if (!dropdownMenu) {
       throw new Error("Dropdown menu element not found.");
-    }
-    if (!languageSelector) {
-      throw new Error("Language selector element not found.");
     }
     menuOpen = true;
     languageSelector.classList.add("active");
@@ -66,9 +69,6 @@ const options = languages.filter((language) => language !== selectedLanguage);
   function closeLanguageMenu() {
     if (!dropdownMenu) {
       throw new Error("Dropdown menu element not found.");
-    }
-    if (!languageSelector) {
-      throw new Error("Language selector element not found.");
     }
     menuOpen = false;
     languageSelector.classList.remove("active");
@@ -80,9 +80,8 @@ const options = languages.filter((language) => language !== selectedLanguage);
     else openLanguageMenu();
   }
 
-  if (!languageSelector) {
-    throw new Error("Language selector element not found.");
-  }
-
-  languageSelector.addEventListener("click", toggleLanguageMenu);
+  languageSelector.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleLanguageMenu();
+  });
 </script>
