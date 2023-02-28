@@ -59,6 +59,10 @@
     "name": "Name",
     "email": "Email",
     "message": "Message",
-    "send": "Send"
+    "send": "Send",
+    "success": "Message sent",
+    "successMessage": "I will get back to you ASAP!",
+    "error": "Error",
+    "errorMessage": "Something went wrong."
   }
 }

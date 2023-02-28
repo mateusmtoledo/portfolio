@@ -31,6 +31,11 @@ const { title } = Astro.props;
   <body class="bg-stone-800 text-white">
     <Header />
     <slot />
+    <div
+      id="toast"
+      class="flex flex-col gap-4 items-end fixed bottom-8 right-8 max-w-[min(calc(100%-64px),360px)] w-full"
+    >
+    </div>
   </body>
 </html>
 
