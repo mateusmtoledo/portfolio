@@ -47,8 +47,14 @@
       "subtitle": "A web store app.",
       "features": [
         "Landing, products and cart pages.",
-        "Product filtering and sorting.",
-        "Responsive design."
+        "Product filtering and sorting."
+      ]
+    },
+    "weatherApp": {
+      "subtitle": "A weather app that consumes the OpenWeatherMap API.",
+      "features": [
+        "Displays weather data according to user's location input.",
+        "Built with pure Typescript, zero production dependencies."
       ]
     }
   },

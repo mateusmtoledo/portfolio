@@ -40,15 +40,21 @@
       "features": [
         "Autenticação de usuários via Email, Google, Twitter, GitHub.",
         "Amizades, posts, comentários, likes.",
-        "Página de perfil customizável com upload de imagens para CDN"
+        "Página de perfil customizável com upload de imagens para CDN."
       ]
     },
     "fakeStore": {
       "subtitle": "Frontend de uma loja virtual.",
       "features": [
         "Páginas de produtos, landing e carrinho.",
-        "Sistema para filtrar e ordenar produtos.",
-        "Design responsivo"
+        "Sistema para filtrar e ordenar produtos."
+      ]
+    },
+    "weatherApp": {
+      "subtitle": "Aplicativo de previsão do tempo consumindo a API OpenWeatherMap.",
+      "features": [
+        "Mostra dados de previsão do tempo de acordo com a localização inserida pelo usuário.",
+        "Criado com Typescript puro, zero dependências de produção."
       ]
     }
   },

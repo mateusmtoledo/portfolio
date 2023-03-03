@@ -1,0 +1,24 @@
+---
+import Project from "./Project.astro";
+import WEATHER_APP_PREVIEW from "../../assets/img/projects/weather-app-preview.png";
+import WEATHER_APP_LOGO from "../../assets/img/projects/weather-app-logo.png";
+import { t } from "i18next";
+
+const features = [
+  t("projects.weatherApp.features.0"),
+  t("projects.weatherApp.features.1"),
+];
+
+const tags = ["HTML", "CSS", "Typescript"];
+---
+
+<Project
+  previewImg={WEATHER_APP_PREVIEW}
+  logo={WEATHER_APP_LOGO}
+  title="Weather App"
+  subtitle={t("projects.weatherApp.subtitle")}
+  features={features}
+  tags={tags}
+  repoHref="https://github.com/mateusmtoledo/weather-app"
+  liveHref="https://mateusmtoledo.github.io/weather-app/"
+/>
