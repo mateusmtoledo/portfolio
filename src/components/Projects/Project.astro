@@ -40,7 +40,7 @@ const order = inverted ? "order-first md:order-last" : "order-first";
           {features.map((feature: string) => <li class="mb-2">{feature}</li>)}
         </ul>
       </div>
-      <div class="flex flex-wrap gap-4 self-end">
+      <div class="grid grid-cols-[repeat(auto-fill,200px)] gap-4">
         <RepoButton href={repoHref} />
         <LiveButton href={liveHref} />
       </div>

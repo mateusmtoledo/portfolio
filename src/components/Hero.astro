@@ -18,15 +18,17 @@ const RESUME_FILE =
         <span class="text-6xl font-bold text-indigo-600">Mateus Toledo</span>
       </h2>
       <p class="text-3xl font-medium mb-16">{t("hero.role")}</p>
-      <div class="flex flex-wrap gap-4">
+      <div class="grid gap-4 grid-cols-[repeat(auto-fill,160px)]">
         <a target="_blank" href={RESUME_FILE}>
-          <Button class="flex items-center gap-1">
+          <Button class="w-full flex items-center gap-1">
             <DownloadIcon class="w-6 stroke-current stroke-[10px]" />
             <span>{t("hero.resume")}</span>
           </Button>
         </a>
         <a href="#contact">
-          <Button primary class="w-max">{t("hero.contactMe")}</Button>
+          <Button class="w-full text-center" primary>
+            {t("hero.contactMe")}
+          </Button>
         </a>
       </div>
     </div>
