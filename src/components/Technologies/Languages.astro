@@ -1,12 +1,18 @@
 ---
 import Technology from "./Technology.astro";
 import TechSection from "./TechSection.astro";
+import HTML_ICON from "../../assets/img/tech/html.svg";
+import CSS_ICON from "../../assets/img/tech/css.svg";
 import JS_ICON from "../../assets/img/tech/javascript.svg";
 import TS_ICON from "../../assets/img/tech/typescript.svg";
+import CSHARP_ICON from "../../assets/img/tech/csharp.svg";
 import { t } from "i18next";
 ---
 
 <TechSection name={t("technologies.languages")}>
+  <Technology name="HTML" icon={HTML_ICON} />
+  <Technology name="CSS" icon={CSS_ICON} />
   <Technology name="Javascript" icon={JS_ICON} />
   <Technology name="Typescript" icon={TS_ICON} />
+  <Technology name="C#" icon={CSHARP_ICON} />
 </TechSection>

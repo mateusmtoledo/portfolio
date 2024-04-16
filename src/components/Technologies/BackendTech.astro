@@ -2,13 +2,17 @@
 import Technology from "./Technology.astro";
 import TechSection from "./TechSection.astro";
 import NODE_ICON from "../../assets/img/tech/nodejs.svg";
-import EXPRESS_ICON from "../../assets/img/tech/express.svg";
+import DOTNET_ICON from "../../assets/img/tech/dotnet.svg";
 import MONGODB_ICON from "../../assets/img/tech/mongodb.svg";
+import MYSQL_ICON from "../../assets/img/tech/mysql.svg";
+import POSTGRESQL_ICON from "../../assets/img/tech/postgresql.svg";
 import { t } from "i18next";
 ---
 
 <TechSection name={t("technologies.backend")}>
   <Technology name="NodeJS" icon={NODE_ICON} />
-  <Technology name="Express" icon={EXPRESS_ICON} />
+  <Technology name=".NET Core" icon={DOTNET_ICON} />
   <Technology name="MongoDB" icon={MONGODB_ICON} />
+  <Technology name="MySQL" icon={MYSQL_ICON} />
+  <Technology name="PostgreSQL" icon={POSTGRESQL_ICON} />
 </TechSection>

@@ -1,14 +1,18 @@
 ---
 import Technology from "./Technology.astro";
 import TechSection from "./TechSection.astro";
-import HTML_ICON from "../../assets/img/tech/html.svg";
-import CSS_ICON from "../../assets/img/tech/css.svg";
 import REACT_ICON from "../../assets/img/tech/react.svg";
+import VUE_ICON from "../../assets/img/tech/vue.svg";
+import MUI_ICON from "../../assets/img/tech/mui.svg";
+import TAILWIND_ICON from "../../assets/img/tech/tailwind.svg";
+import STYLEDCOMPONENTS_ICON from "../../assets/img/tech/styledcomponents.svg";
 import { t } from "i18next";
 ---
 
 <TechSection name={t("technologies.frontend")}>
-  <Technology name="HTML" icon={HTML_ICON} />
-  <Technology name="CSS" icon={CSS_ICON} />
   <Technology name="React" icon={REACT_ICON} />
+  <Technology name="Vue" icon={VUE_ICON} />
+  <Technology name="Material UI" icon={MUI_ICON} />
+  <Technology name="Tailwind" icon={TAILWIND_ICON} />
+  <Technology name="Styled Components" icon={STYLEDCOMPONENTS_ICON} />
 </TechSection>

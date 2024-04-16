@@ -1,6 +1,8 @@
 ---
 import Technology from "./Technology.astro";
 import TechSection from "./TechSection.astro";
+import LINUX_ICON from "../../assets/img/tech/linux.svg";
+import NEXT_ICON from "../../assets/img/tech/next.svg";
 import GIT_ICON from "../../assets/img/tech/git.svg";
 import WEBPACK_ICON from "../../assets/img/tech/webpack.svg";
 import GITHUB_ICON from "../../assets/img/tech/github.svg";
@@ -8,7 +10,9 @@ import { t } from "i18next";
 ---
 
 <TechSection name={t("technologies.misc")}>
+  <Technology name="Linux" icon={LINUX_ICON} />
   <Technology name="Git" icon={GIT_ICON} />
-  <Technology name="Webpack" icon={WEBPACK_ICON} />
   <Technology name="GitHub" icon={GITHUB_ICON} />
+  <Technology name="Webpack" icon={WEBPACK_ICON} />
+  <Technology name="Next" icon={NEXT_ICON} />
 </TechSection>
